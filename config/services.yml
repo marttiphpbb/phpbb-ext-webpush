@@ -43,4 +43,10 @@ services:
             - '@user'
             - '@dbal.conn'
         tags:
-            - { name: console.command }            
+            - { name: console.command }
+
+    marttiphpbb.webpushnotifications.service.store:
+        class: marttiphpbb\webpushnotifications\service\store
+        arguments:
+            - '@config_text'
+            - '@cache.driver'           

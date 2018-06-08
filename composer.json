@@ -14,7 +14,8 @@
 			"role": "Developer"
 		}],
 	"require": {
-		"php": ">=7"
+		"php": ">=7",
+		"minishlink/web-push": "^4.0"
 	},
 	"require-dev": {
 	},
