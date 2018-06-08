@@ -1,0 +1,46 @@
+services:
+    auth.provider.db_email:
+        class: marttiphpbb\emaillogin\auth\email
+        arguments:
+            - '@dbal.conn'
+            - '@config'
+            - '@passwords.manager'
+            - '@request'
+            - '@user'
+            - '@service_container'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+        tags:
+            - { name: auth.provider }
+
+    auth.provider.db_username_or_email:
+        class: marttiphpbb\emaillogin\auth\username_or_email
+        arguments:
+            - '@dbal.conn'
+            - '@config'
+            - '@passwords.manager'
+            - '@request'
+            - '@user'
+            - '@service_container'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+        tags:
+            - { name: auth.provider }
+
+    marttiphpbb.emaillogin.listener:
+        class: marttiphpbb\emaillogin\event\listener
+        arguments:
+            - '@user'
+            - '@template'
+            - '@language'
+            - '@config'
+        tags:
+            - { name: event.listener }
+
+    marttiphpbb.emaillogin.console.info:
+        class: marttiphpbb\emaillogin\console\info
+        arguments:   
+            - '@user'
+            - '@dbal.conn'
+        tags:
+            - { name: console.command }            
