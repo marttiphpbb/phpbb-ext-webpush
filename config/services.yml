@@ -1,6 +1,6 @@
 services:
     auth.provider.db_email:
-        class: marttiphpbb\emaillogin\auth\email
+        class: marttiphpbb\webpushnotifications\auth\email
         arguments:
             - '@dbal.conn'
             - '@config'
@@ -14,7 +14,7 @@ services:
             - { name: auth.provider }
 
     auth.provider.db_username_or_email:
-        class: marttiphpbb\emaillogin\auth\username_or_email
+        class: marttiphpbb\webpushnotifications\auth\username_or_email
         arguments:
             - '@dbal.conn'
             - '@config'
@@ -27,8 +27,8 @@ services:
         tags:
             - { name: auth.provider }
 
-    marttiphpbb.emaillogin.listener:
-        class: marttiphpbb\emaillogin\event\listener
+    marttiphpbb.webpushnotifications.listener:
+        class: marttiphpbb\webpushnotifications\event\listener
         arguments:
             - '@user'
             - '@template'
@@ -37,8 +37,8 @@ services:
         tags:
             - { name: event.listener }
 
-    marttiphpbb.emaillogin.console.info:
-        class: marttiphpbb\emaillogin\console\info
+    marttiphpbb.webpushnotifications.console.info:
+        class: marttiphpbb\webpushnotifications\console\info
         arguments:   
             - '@user'
             - '@dbal.conn'

@@ -1,10 +1,10 @@
-{%- if MARTTIPHPBB_EMAILLOGIN_AUTH and not S_USER_LOGGED_IN and not S_IS_BOT -%}  
-    {%- INCLUDEJS '@marttiphpbb_emaillogin/js/quicklogin.js' -%}
-    <span class="hidden" id="marttiphpbb_emaillogin" data-auth-method="{{- MARTTIPHPBB_EMAILLOGIN_AUTH -}}">
-        {%- if MARTTIPHPBB_EMAILLOGIN_AUTH == 'db_email' -%}    
-            {{- lang('MARTTIPHPBB_EMAILLOGIN_EMAIL') -}}
+{%- if MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH and not S_USER_LOGGED_IN and not S_IS_BOT -%}  
+    {%- INCLUDEJS '@marttiphpbb_webpushnotifications/js/quicklogin.js' -%}
+    <span class="hidden" id="marttiphpbb_webpushnotifications" data-auth-method="{{- MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH -}}">
+        {%- if MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH == 'db_email' -%}    
+            {{- lang('MARTTIPHPBB_WEBPUSHNOTIFICATIONS_EMAIL') -}}
         {%- else -%}
-            {{- lang('MARTTIPHPBB_EMAILLOGIN_USERNAME_OR_EMAIL') -}}
+            {{- lang('MARTTIPHPBB_WEBPUSHNOTIFICATIONS_USERNAME_OR_EMAIL') -}}
         {%- endif -%}
         {{- lang('COLON') -}}
     </span>

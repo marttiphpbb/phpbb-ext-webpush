@@ -1,4 +1,4 @@
-# phpBB Extension - marttiphpbb Email Login
+# phpBB Extension - marttiphpbb Web Push Notifications
 
 [Topic on phpBB.com](https://www.phpbb.com/community/viewtopic.php?f=456&t=2474801)
 
@@ -26,19 +26,19 @@ Add console command to check for uniqueness of email addresses.
 
 You can install this on the latest release of phpBB 3.2 by following the steps below:
 
-* Create `marttiphpbb/emaillogin` in the `ext` directory.
-* Download and unpack the repository into `ext/marttiphpbb/emaillogin`
-* Enable `Email Login` in the ACP at `Customise -> Manage extensions`.
+* Create `marttiphpbb/webpushnotifications` in the `ext` directory.
+* Download and unpack the repository into `ext/marttiphpbb/webpushnotifications`
+* Enable `Web Push Notifications` in the ACP at `Customise -> Manage extensions`.
 * Chose one of the providers Db_email or Db_username_or_email in the ACP. (General Client Communication > Authenication)
 
 ## Uninstall
 
-* Disable `Email Login` in the ACP at `Customise -> Extension Management -> Extensions`.
-* To permanently uninstall, click `Delete Data`. Optionally delete the `/ext/marttiphpbb/emaillogin` directory.
+* Disable `Web Push Notifications` in the ACP at `Customise -> Extension Management -> Extensions`.
+* To permanently uninstall, click `Delete Data`. Optionally delete the `/ext/marttiphpbb/webpushnotifications` directory.
 
 ## Support
 
-* Report bugs and other issues to the [Issue Tracker](https://github.com/marttiphpbb/phpbb-ext-emaillogin/issues).
+* Report bugs and other issues to the [Issue Tracker](https://github.com/marttiphpbb/phpbb-ext-webpushnotifications/issues).
 
 ## License
 

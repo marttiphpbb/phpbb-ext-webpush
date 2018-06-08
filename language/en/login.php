@@ -1,7 +1,7 @@
 <?php
 
 /**
-* phpBB Extension - marttiphpbb emaillogin
+* phpBB Extension - marttiphpbb webpushnotifications
 * @copyright (c) 2018 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
@@ -17,6 +17,6 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, [
-	'MARTTIPHPBB_EMAILLOGIN_EMAIL'				=> 'Email',
-	'MARTTIPHPBB_EMAILLOGIN_USERNAME_OR_EMAIL'	=> 'Username or Email',
+	'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_EMAIL'				=> 'Email',
+	'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_USERNAME_OR_EMAIL'	=> 'Username or Email',
 ]);

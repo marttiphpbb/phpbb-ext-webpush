@@ -1,19 +1,19 @@
 <?php
 /**
-* phpBB Extension - marttiphpbb emaillogin
+* phpBB Extension - marttiphpbb webpushnotifications
 * @copyright (c) 2018 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\emaillogin\auth;
+namespace marttiphpbb\webpushnotifications\auth;
 
-use marttiphpbb\emaillogin\auth\base;
+use marttiphpbb\webpushnotifications\auth\base;
 
 class username_or_email extends base
 {
 	public function login($username_or_email, $password)
 	{
-		$listener = $this->phpbb_container->get('marttiphpbb.emaillogin.listener');
+		$listener = $this->phpbb_container->get('marttiphpbb.webpushnotifications.listener');
 
 		if ($listener->is_admin_login())
 		{
@@ -26,7 +26,7 @@ class username_or_email extends base
 
             return [
 				'status'	=> LOGIN_ERROR_USERNAME,
-				'error_msg'	=> 'MARTTIPHPBB_EMAILLOGIN_ERROR_NO_USERNAME_OR_EMAIL',
+				'error_msg'	=> 'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_ERROR_NO_USERNAME_OR_EMAIL',
 				'user_row'	=> ['user_id' => ANONYMOUS],
             ];
         }

@@ -1,11 +1,11 @@
 <?php
 /**
-* phpBB Extension - marttiphpbb emaillogin
+* phpBB Extension - marttiphpbb webpushnotifications
 * @copyright (c) 2018 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\emaillogin\auth;
+namespace marttiphpbb\webpushnotifications\auth;
 
 use phpbb\auth\provider\db as db_provider;
 
@@ -35,9 +35,9 @@ class base extends db_provider
 
 			return [
 				'status'	=> LOGIN_ERROR_USERNAME,
-				'error_msg'	=> 'MARTTIPHPBB_EMAILLOGIN_LOGIN_ERROR_EMAIL',
+				'error_msg'	=> 'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_LOGIN_ERROR_EMAIL',
 				'user_row'	=> ['user_id' => ANONYMOUS],
-				'marttiphpbb_emaillogin_err_sprintf' 
+				'marttiphpbb_webpushnotifications_err_sprintf' 
 					=> $this->get_email_err_sprintf_args($email),				
 			];
 		}
@@ -48,9 +48,9 @@ class base extends db_provider
 
 			return [
 				'status'	=> LOGIN_ERROR_USERNAME,
-				'error_msg'	=> 'MARTTIPHPBB_EMAILLOGIN_ERROR_EMAIL_DUPLICATE',	
+				'error_msg'	=> 'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_ERROR_EMAIL_DUPLICATE',	
 				'user_row'	=> ['user_id' => ANONYMOUS],
-				'marttiphpbb_emaillogin_err_sprintf' 
+				'marttiphpbb_webpushnotifications_err_sprintf' 
 					=> $this->get_email_err_sprintf_args($email),
 			];
 		}
