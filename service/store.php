@@ -2,7 +2,7 @@
 
 /**
 * phpBB Extension - marttiphpbb Web Push Notifications
-* @copyright (c) 2015 - 2018 marttiphpbb <info@martti.be>
+* @copyright (c) 2018 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
@@ -10,11 +10,11 @@ namespace marttiphpbb\webpushnotifications\service;
 
 use phpbb\config\db_text as config_text;
 use phpbb\cache\driver\driver_interface as cache;
+use marttiphpbb\webpushnotifications\util\cnst;
 
 class store
 {
-	const KEY = 'marttiphpbb_webpushnotifications';
-	const CACHE_KEY = '_' . self::KEY;
+	const CACHE_KEY = '_' . cnst::ID;
 
 	/** @var config_text */
 	private $config_text;
@@ -45,13 +45,13 @@ class store
 			return;
 		}
 		
-		$this->data = unserialize($this->config_text->get(self::KEY));
+		$this->data = unserialize($this->config_text->get(cnst::ID));
 		$this->cache->put(self::CACHE_KEY, $this->data);
 	}
 
 	private function write()
 	{
-		$this->config_text->set(self::KEY, serialize($this->data));
+		$this->config_text->set(cnst::ID, serialize($this->data));
 		$this->cache->put(self::CACHE_KEY, $this->data);
 	}
 
