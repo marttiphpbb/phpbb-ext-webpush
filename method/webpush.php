@@ -1,12 +1,12 @@
 <?php
 
 /**
-* phpBB Extension - marttiphpbb webpushnotifications
-* @copyright (c) 2018 marttiphpbb <info@martti.be>
+* phpBB Extension - marttiphpbb webpush
+* @copyright (c) 2018 - 2020 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\webpushnotifications\method;
+namespace marttiphpbb\webpush\method;
 
 use phpbb\notification\type\type_interface;
 use phpbb\notification\method\messenger_base;

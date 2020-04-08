@@ -1,22 +1,20 @@
 <?php
 /**
-* phpBB Extension - marttiphpbb webpushnotifications
-* @copyright (c) 2018 marttiphpbb <info@martti.be>
+* phpBB Extension - marttiphpbb webpush
+* @copyright (c) 2018 - 2020 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\webpushnotifications;
+namespace marttiphpbb\webpush;
 
 use phpbb\extension\base;
 
 class ext extends base
 {
-	/**
-	 * phpBB 3.2.x and PHP 7.1+
-	 */
 	public function is_enableable()
 	{
 		$config = $this->container->get('config');
-		return phpbb_version_compare($config['version'], '3.2', '>=') && version_compare(PHP_VERSION, '7.1', '>=');
+		return phpbb_version_compare($config['version'], '3.3', '>=')
+			&& version_compare(PHP_VERSION, '7.1', '>=');
 	}
 }

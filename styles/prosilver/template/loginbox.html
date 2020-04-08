@@ -1,6 +1,6 @@
-{%- INCLUDEJS '@marttiphpbb_webpushnotifications/js/loginbox.js' -%}
+{%- INCLUDEJS '@marttiphpbb_webpush/js/loginbox.js' -%}
 
-<span class="hidden" id="marttiphpbb_webpushnotifications" data-auth-method="{{- MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH -}}">
+<span class="hidden" id="marttiphpbb_webpush" data-auth-method="{{- MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH -}}">
     {%- if MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH == 'db_email' -%}    
         {{- lang('MARTTIPHPBB_WEBPUSHNOTIFICATIONS_EMAIL') -}}
     {%- else -%}

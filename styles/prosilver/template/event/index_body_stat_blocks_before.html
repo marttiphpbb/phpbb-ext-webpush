@@ -1,6 +1,6 @@
 {%- if MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH and not S_USER_LOGGED_IN and not S_IS_BOT -%}  
-    {%- INCLUDEJS '@marttiphpbb_webpushnotifications/js/quicklogin.js' -%}
-    <span class="hidden" id="marttiphpbb_webpushnotifications" data-auth-method="{{- MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH -}}">
+    {%- INCLUDEJS '@marttiphpbb_webpush/js/quicklogin.js' -%}
+    <span class="hidden" id="marttiphpbb_webpush" data-auth-method="{{- MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH -}}">
         {%- if MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH == 'db_email' -%}    
             {{- lang('MARTTIPHPBB_WEBPUSHNOTIFICATIONS_EMAIL') -}}
         {%- else -%}

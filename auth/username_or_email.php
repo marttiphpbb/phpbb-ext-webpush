@@ -1,19 +1,19 @@
 <?php
 /**
-* phpBB Extension - marttiphpbb webpushnotifications
-* @copyright (c) 2018 marttiphpbb <info@martti.be>
+* phpBB Extension - marttiphpbb webpush
+* @copyright (c) 2018 - 2020 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\webpushnotifications\auth;
+namespace marttiphpbb\webpush\auth;
 
-use marttiphpbb\webpushnotifications\auth\base;
+use marttiphpbb\webpush\auth\base;
 
 class username_or_email extends base
 {
 	public function login($username_or_email, $password)
 	{
-		$listener = $this->phpbb_container->get('marttiphpbb.webpushnotifications.listener');
+		$listener = $this->phpbb_container->get('marttiphpbb.webpush.listener');
 
 		if ($listener->is_admin_login())
 		{

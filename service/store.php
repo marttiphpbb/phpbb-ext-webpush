@@ -2,15 +2,15 @@
 
 /**
 * phpBB Extension - marttiphpbb Web Push Notifications
-* @copyright (c) 2018 marttiphpbb <info@martti.be>
+* @copyright (c) 2018 - 2020 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\webpushnotifications\service;
+namespace marttiphpbb\webpush\service;
 
 use phpbb\config\db_text as config_text;
 use phpbb\cache\driver\driver_interface as cache;
-use marttiphpbb\webpushnotifications\util\cnst;
+use marttiphpbb\webpush\util\cnst;
 
 class store
 {

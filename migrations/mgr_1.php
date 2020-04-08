@@ -1,16 +1,24 @@
 <?php
 /**
-* phpBB Extension - marttiphpbb webpushnotifications
-* @copyright (c) 2018 marttiphpbb <info@martti.be>
+* phpBB Extension - marttiphpbb webpush
+* @copyright (c) 2018 - 2020 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\webpushnotifications\migrations;
-use marttiphpbb\webpushnotifications\util\cnst;
+namespace marttiphpbb\webpush\migrations;
 
-class v_0_1_0 extends \phpbb\db\migration\migration
+use marttiphpbb\webpush\util\cnst;
+
+class mgr_1 extends \phpbb\db\migration\migration
 {
-	public function update_data()
+	static public function depends_on():array
+	{
+		return [
+			'\marttiphpbb\calendarmonoinput\migrations\mgr_1',
+		];
+	}
+
+	public function update_data():array
 	{
 		return [
 			['config_text.add', [cnst::ID, serialize([])]],
@@ -25,7 +33,7 @@ class v_0_1_0 extends \phpbb\db\migration\migration
 				'acp',
 				cnst::L_ACP,
 				[
-					'module_basename'	=> '\marttiphpbb\webpushnotifications\acp\main_module',
+					'module_basename'	=> '\marttiphpbb\webpush\acp\main_module',
 					'modes'				=> [
 						'select_forum',
 					],

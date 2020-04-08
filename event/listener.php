@@ -1,11 +1,11 @@
 <?php
 /**
-* phpBB Extension - marttiphpbb webpushnotifications
-* @copyright (c) 2018 marttiphpbb <info@martti.be>
+* phpBB Extension - marttiphpbb webpush
+* @copyright (c) 2018 - 2020 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\webpushnotifications\event;
+namespace marttiphpbb\webpush\event;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use phpbb\event\data as event;
@@ -66,7 +66,7 @@ class listener implements EventSubscriberInterface
 			return;
 		}
 	
-		$this->language->add_lang('error', 'marttiphpbb/webpushnotifications');
+		$this->language->add_lang('error', 'marttiphpbb/webpush');
 
 		$this->login_input_page();
 	}
@@ -97,10 +97,10 @@ class listener implements EventSubscriberInterface
 
 		error_log($auth_method);
 
-		$this->language->add_lang('login', 'marttiphpbb/webpushnotifications');
+		$this->language->add_lang('login', 'marttiphpbb/webpush');
 
 		$this->template->assign_vars([
-			'PROVIDER_TEMPLATE_FILE'		=> '@marttiphpbb_webpushnotifications/loginbox.html',
+			'PROVIDER_TEMPLATE_FILE'		=> '@marttiphpbb_webpush/loginbox.html',
 			'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH' 	=> $auth_method,
 		]);
 	}
@@ -110,9 +110,9 @@ class listener implements EventSubscriberInterface
 		$err = $event['err'];
 		$result = $event['result'];
 
-		if (isset($result['marttiphpbb_webpushnotifications_err_sprintf']))
+		if (isset($result['marttiphpbb_webpush_err_sprintf']))
 		{
-			$err = vsprintf($err, $result['marttiphpbb_webpushnotifications_err_sprintf']);
+			$err = vsprintf($err, $result['marttiphpbb_webpush_err_sprintf']);
 			$event['err'] = $err;
 		}
 	}

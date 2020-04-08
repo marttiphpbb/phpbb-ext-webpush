@@ -1,31 +1,31 @@
 # phpBB Extension - marttiphpbb Web Push Notifications
 
-## EARLY DEVELOPMENT STAGE !!
+## EARLY DEVELOPMENT STAGE !! DO NOT INSTALL
 
 [Topic on phpBB.com]()
 
 ## Requirements
 
-* phpBB 3.2.x
+* phpBB 3.3+
 * PHP 7.1+ (PHP 7.2+ recommanded)
 
 
 ## Quick Install
 
-You can install this on the latest release of phpBB 3.2 by following the steps below:
+You can install this on the latest release of phpBB by following the steps below:
 
-* Create `marttiphpbb/webpushnotifications` in the `ext` directory.
-* Download and unpack the repository into `ext/marttiphpbb/webpushnotifications`
+* Create `marttiphpbb/webpush` in the `ext` directory.
+* Download and unpack the repository into `ext/marttiphpbb/webpush`
 * Enable `Web Push Notifications` in the ACP at `Customise -> Manage extensions`.
 
 ## Uninstall
 
 * Disable `Web Push Notifications` in the ACP at `Customise -> Extension Management -> Extensions`.
-* To permanently uninstall, click `Delete Data`. Optionally delete the `/ext/marttiphpbb/webpushnotifications` directory.
+* To permanently uninstall, click `Delete Data`. Optionally delete the `/ext/marttiphpbb/webpush` directory.
 
 ## Support
 
-* Report bugs and other issues to the [Issue Tracker](https://github.com/marttiphpbb/phpbb-ext-webpushnotifications/issues).
+* Report bugs and other issues to the [Issue Tracker](https://github.com/marttiphpbb/phpbb-ext-webpush/issues).
 
 ## License
 

@@ -15,7 +15,7 @@
 		{%- for cf in cforums -%}
 			<tr>
 				<td>
-					<input class="radio" name="marttiphpbb_webpushnotifications_id" value="{{- cf.ID -}}" type="radio"{%- if cf.ID ==  MARTTIPHPBB_ARCHIVEFORUM_ID %} checked="checked"{%- endif -%}>
+					<input class="radio" name="marttiphpbb_webpush_id" value="{{- cf.ID -}}" type="radio"{%- if cf.ID ==  MARTTIPHPBB_ARCHIVEFORUM_ID %} checked="checked"{%- endif -%}>
 					&nbsp;
 					{{- cf.NAME -}}
 				</td>
@@ -32,7 +32,7 @@
 
 	</fieldset>
 
-	{%- include '@marttiphpbb_webpushnotifications/include/submit_buttons.html' -%}
+	{%- include '@marttiphpbb_webpush/include/submit_buttons.html' -%}
 </form>
 
 {%- include 'overall_footer.html' -%}

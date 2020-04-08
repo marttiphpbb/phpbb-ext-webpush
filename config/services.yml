@@ -1,6 +1,6 @@
 services:
     auth.provider.db_email:
-        class: marttiphpbb\webpushnotifications\auth\email
+        class: marttiphpbb\webpush\auth\email
         arguments:
             - '@dbal.conn'
             - '@config'
@@ -14,7 +14,7 @@ services:
             - { name: auth.provider }
 
     auth.provider.db_username_or_email:
-        class: marttiphpbb\webpushnotifications\auth\username_or_email
+        class: marttiphpbb\webpush\auth\username_or_email
         arguments:
             - '@dbal.conn'
             - '@config'
@@ -27,8 +27,8 @@ services:
         tags:
             - { name: auth.provider }
 
-    marttiphpbb.webpushnotifications.listener:
-        class: marttiphpbb\webpushnotifications\event\listener
+    marttiphpbb.webpush.listener:
+        class: marttiphpbb\webpush\event\listener
         arguments:
             - '@user'
             - '@template'
@@ -37,22 +37,22 @@ services:
         tags:
             - { name: event.listener }
 
-    marttiphpbb.webpushnotifications.console.info:
-        class: marttiphpbb\webpushnotifications\console\info
+    marttiphpbb.webpush.console.info:
+        class: marttiphpbb\webpush\console\info
         arguments:   
             - '@user'
             - '@dbal.conn'
         tags:
             - { name: console.command }
 
-    marttiphpbb.webpushnotifications.service.store:
-        class: marttiphpbb\webpushnotifications\service\store
+    marttiphpbb.webpush.service.store:
+        class: marttiphpbb\webpush\service\store
         arguments:
             - '@config_text'
             - '@cache.driver'
 
-    marttiphpbb.webpushnotifications.notification.method.webpush:
-        class: marttiphpbb\webpushnotifications\method\webpush
+    marttiphpbb.webpush.notification.method.webpush:
+        class: marttiphpbb\webpush\method\webpush
         shared: false
         arguments:
             - '@user_loader'

@@ -1,11 +1,11 @@
 <?php
 /**
-* phpBB Extension - marttiphpbb webpushnotifications
-* @copyright (c) 2018 marttiphpbb <info@martti.be>
+* phpBB Extension - marttiphpbb webpush
+* @copyright (c) 2018 - 2020 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\webpushnotifications\console;
+namespace marttiphpbb\webpush\console;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -31,7 +31,7 @@ class info extends command
 	protected function configure()
 	{
 		$this
-			->setName('ext-webpushnotifications:info')
+			->setName('ext-webpush:info')
 			->setDescription('show conflicting user email and username information.')
 			->setHelp('Shows duplicate emails and non matching email-usernames of users.')
 			->addOption('number', 'n', InputOption::VALUE_OPTIONAL, 'Maximum number of results shown (defaults to 50).', 50)

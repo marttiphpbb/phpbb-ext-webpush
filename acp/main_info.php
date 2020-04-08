@@ -1,25 +1,25 @@
 <?php
 /**
-* phpBB Extension - marttiphpbb webpushnotifications
-* @copyright (c) 2018 marttiphpbb <info@martti.be>
+* phpBB Extension - marttiphpbb webpush
+* @copyright (c) 2018 - 2020 marttiphpbb <info@martti.be>
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\webpushnotifications\acp;
+namespace marttiphpbb\webpush\acp;
 
-use marttiphpbb\webpushnotifications\util\cnst;
+use marttiphpbb\webpush\util\cnst;
 
 class main_info
 {
 	function module()
 	{
 		return [
-			'filename'	=> '\marttiphpbb\webpushnotifications\acp\main_module',
+			'filename'	=> '\marttiphpbb\webpush\acp\main_module',
 			'title'		=> cnst::L_ACP,
 			'modes'		=> [			
 				'select_forum'	=> [
 					'title'	=> cnst::L_ACP . '_SELECT',
-					'auth'	=> 'ext_marttiphpbb/webpushnotifications && acl_a_board',
+					'auth'	=> 'ext_marttiphpbb/webpush && acl_a_board',
 					'cat'	=> [cnst::L_ACP],
 				],			
 			],

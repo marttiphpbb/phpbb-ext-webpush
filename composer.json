@@ -1,12 +1,12 @@
 {
-	"name": "marttiphpbb/webpushnotifications",
+	"name": "marttiphpbb/webpush",
 	"type": "phpbb-extension",
-	"description": "phpBB 3.2 extension to provide Web Push Notifications",
-	"homepage": "https://github.com/marttiphpbb/phpbb-ext-webpushnotifications",
+	"description": "phpBB 3.3 extension to provide Web Push Notifications",
+	"homepage": "https://github.com/marttiphpbb/phpbb-ext-webpush",
 	"version": "0.1.0",
 	"time": "2018-06-08",
 	"keywords": ["phpbb", "extension", "web push", "notifications"],
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-only",
 	"authors": [{
 			"name": "martti",
 			"email": "phpbb@martti.be",
@@ -22,12 +22,12 @@
 	"extra": {
 		"display-name": "Web Push Notifications",
 		"soft-require": {
-			"phpbb/phpbb": ">=3.2.0"
+			"phpbb/phpbb": ">=3.3"
 		},
 		"version-check": {
 			"host": "marttiphpbb.github.io",
 			"directory": "/version",
-			"filename": "webpushnotifications.json"
+			"filename": "webpush.json"
 		}
 	}
 }

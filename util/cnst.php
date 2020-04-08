@@ -5,12 +5,12 @@
 * @license GNU General Public License, version 2 (GPL-2.0)
 */
 
-namespace marttiphpbb\webpushnotifications\util;
+namespace marttiphpbb\webpush\util;
 
 class cnst
 {
-	const FOLDER = 'marttiphpbb/webpushnotifications';
-	const ID = 'marttiphpbb_webpushnotifications';
+	const FOLDER = 'marttiphpbb/webpush';
+	const ID = 'marttiphpbb_webpush';
 	const L = 'MARTTIPHPBB_WEBPUSHNOTIFICATIONS';
 	const L_ACP = 'ACP_' . self::L;
 	const L_MCP = 'MCP_' . self::L;
