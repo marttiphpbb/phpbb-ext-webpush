@@ -9,33 +9,31 @@ namespace marttiphpbb\webpush\migrations;
 
 use marttiphpbb\webpush\util\cnst;
 
-class mgr_1 extends \phpbb\db\migration\migration
+class mgr_3 extends \phpbb\db\migration\migration
 {
 	static public function depends_on():array
 	{
 		return [
-			'\phpbb\db\migration\data\v330\v330',
+			'\marttiphpbb\webpush\migrations\mgr_2',
 		];
 	}
 
 	public function update_data():array
 	{
 		return [
-			['config_text.add', [cnst::ID, serialize([])]],
-
 			['module.add', [
-				'acp',
-				'ACP_CAT_DOT_MODS',
-				cnst::L_ACP,
+				'ucp',
+				'UCP_PREFS',
+				cnst::L_UCP_SUBSCRPTIONS,
 			]],
 
 			['module.add', [
-				'acp',
-				cnst::L_ACP,
+				'ucp',
+				cnst::L_UCP_SUBSCRPTIONS,
 				[
-					'module_basename'	=> '\marttiphpbb\webpush\acp\main_module',
+					'module_basename'	=> '\marttiphpbb\webpush\ucp\main_module',
 					'modes'				=> [
-						'select_forum',
+						'webpush_subscriptions',
 					],
 				],
 			]],

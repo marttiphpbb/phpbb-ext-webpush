@@ -35,7 +35,7 @@ class base extends db_provider
 
 			return [
 				'status'	=> LOGIN_ERROR_USERNAME,
-				'error_msg'	=> 'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_LOGIN_ERROR_EMAIL',
+				'error_msg'	=> 'MARTTIPHPBB_WEBPUSH_LOGIN_ERROR_EMAIL',
 				'user_row'	=> ['user_id' => ANONYMOUS],
 				'marttiphpbb_webpush_err_sprintf' 
 					=> $this->get_email_err_sprintf_args($email),				
@@ -48,7 +48,7 @@ class base extends db_provider
 
 			return [
 				'status'	=> LOGIN_ERROR_USERNAME,
-				'error_msg'	=> 'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_ERROR_EMAIL_DUPLICATE',	
+				'error_msg'	=> 'MARTTIPHPBB_WEBPUSH_ERROR_EMAIL_DUPLICATE',	
 				'user_row'	=> ['user_id' => ANONYMOUS],
 				'marttiphpbb_webpush_err_sprintf' 
 					=> $this->get_email_err_sprintf_args($email),

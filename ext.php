@@ -15,6 +15,6 @@ class ext extends base
 	{
 		$config = $this->container->get('config');
 		return phpbb_version_compare($config['version'], '3.3', '>=')
-			&& version_compare(PHP_VERSION, '7.1', '>=');
+			&& version_compare(PHP_VERSION, '7.2', '>=');
 	}
 }

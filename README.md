@@ -1,14 +1,18 @@
 # phpBB Extension - marttiphpbb Web Push Notifications
 
-## EARLY DEVELOPMENT STAGE !! DO NOT INSTALL
+## EARLY DEVELOPMENT STAGE !! DO NOT INSTALL !!
+
+I repeat ...
+
+## EARLY DEVELOPMENT STAGE !! DO NOT INSTALL !!
 
 [Topic on phpBB.com]()
 
 ## Requirements
 
 * phpBB 3.3+
-* PHP 7.1+ (PHP 7.2+ recommanded)
-
+* PHP 7.2+
+* PHP extensions gmp, mbstring, curl, openssl
 
 ## Quick Install
 

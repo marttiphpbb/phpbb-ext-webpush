@@ -1,0 +1,6 @@
+{%- if MODE == 'notification_options' -%}
+    <div class="hidden" id="marttiphpbb_webpush" data-webpush="">
+        <p>ENABLE WEB PUSH NOTIFICATIONS</p>
+    </div>
+    {%- INCLUDEJS '@marttiphpbb_webpush/js/webpush.js' -%}
+{%- endif -%}

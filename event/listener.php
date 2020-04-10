@@ -101,7 +101,7 @@ class listener implements EventSubscriberInterface
 
 		$this->template->assign_vars([
 			'PROVIDER_TEMPLATE_FILE'		=> '@marttiphpbb_webpush/loginbox.html',
-			'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH' 	=> $auth_method,
+			'MARTTIPHPBB_WEBPUSH_AUTH' 	=> $auth_method,
 		]);
 	}
 

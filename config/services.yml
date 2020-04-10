@@ -1,32 +1,4 @@
 services:
-    auth.provider.db_email:
-        class: marttiphpbb\webpush\auth\email
-        arguments:
-            - '@dbal.conn'
-            - '@config'
-            - '@passwords.manager'
-            - '@request'
-            - '@user'
-            - '@service_container'
-            - '%core.root_path%'
-            - '%core.php_ext%'
-        tags:
-            - { name: auth.provider }
-
-    auth.provider.db_username_or_email:
-        class: marttiphpbb\webpush\auth\username_or_email
-        arguments:
-            - '@dbal.conn'
-            - '@config'
-            - '@passwords.manager'
-            - '@request'
-            - '@user'
-            - '@service_container'
-            - '%core.root_path%'
-            - '%core.php_ext%'
-        tags:
-            - { name: auth.provider }
-
     marttiphpbb.webpush.listener:
         class: marttiphpbb\webpush\event\listener
         arguments:
@@ -39,7 +11,7 @@ services:
 
     marttiphpbb.webpush.console.info:
         class: marttiphpbb\webpush\console\info
-        arguments:   
+        arguments:
             - '@user'
             - '@dbal.conn'
         tags:

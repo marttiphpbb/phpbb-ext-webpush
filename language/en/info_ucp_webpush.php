@@ -17,6 +17,10 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, [
-	'MARTTIPHPBB_WEBPUSH_EMAIL'				=> 'Email',
-	'MARTTIPHPBB_WEBPUSH_USERNAME_OR_EMAIL'	=> 'Username or Email',
+	'UCP_MARTTIPHPBB_WEBPUSH'
+	=> 'Web push',
+	'UCP_MARTTIPHPBB_WEBPUSH_SUBSCRIPTIONS'
+	=> 'Web push subscriptions',
+	'UCP_MARTTIPHPBB_WEBPUSH_ENABLE_OR_DISABLE'
+	=> 'Web push en-/disable',
 ]);

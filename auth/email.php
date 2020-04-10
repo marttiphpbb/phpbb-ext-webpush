@@ -26,7 +26,7 @@ class email extends base
 	
             return [
 				'status'	=> LOGIN_ERROR_USERNAME,
-				'error_msg'	=> 'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_ERROR_NO_EMAIL',
+				'error_msg'	=> 'MARTTIPHPBB_WEBPUSH_ERROR_NO_EMAIL',
 				'user_row'	=> ['user_id' => ANONYMOUS],
             ];
         }
@@ -37,7 +37,7 @@ class email extends base
 
             return [
 				'status'	=> LOGIN_ERROR_USERNAME,
-				'error_msg'	=> 'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_ERROR_NO_VALID_EMAIL',
+				'error_msg'	=> 'MARTTIPHPBB_WEBPUSH_ERROR_NO_VALID_EMAIL',
 				'user_row'	=> ['user_id' => ANONYMOUS],
 				'marttiphpbb_webpush_err_sprintf' 
 					=> $this->get_email_err_sprintf_args($email),

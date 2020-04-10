@@ -1,10 +1,10 @@
 {%- INCLUDEJS '@marttiphpbb_webpush/js/loginbox.js' -%}
 
-<span class="hidden" id="marttiphpbb_webpush" data-auth-method="{{- MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH -}}">
-    {%- if MARTTIPHPBB_WEBPUSHNOTIFICATIONS_AUTH == 'db_email' -%}    
-        {{- lang('MARTTIPHPBB_WEBPUSHNOTIFICATIONS_EMAIL') -}}
+<span class="hidden" id="marttiphpbb_webpush" data-auth-method="{{- MARTTIPHPBB_WEBPUSH_AUTH -}}">
+    {%- if MARTTIPHPBB_WEBPUSH_AUTH == 'db_email' -%}    
+        {{- lang('MARTTIPHPBB_WEBPUSH_EMAIL') -}}
     {%- else -%}
-        {{- lang('MARTTIPHPBB_WEBPUSHNOTIFICATIONS_USERNAME_OR_EMAIL') -}}
+        {{- lang('MARTTIPHPBB_WEBPUSH_USERNAME_OR_EMAIL') -}}
     {%- endif -%}
     {{- lang('COLON') -}}
 </span>

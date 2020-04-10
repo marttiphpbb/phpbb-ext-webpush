@@ -26,7 +26,7 @@ class username_or_email extends base
 
             return [
 				'status'	=> LOGIN_ERROR_USERNAME,
-				'error_msg'	=> 'MARTTIPHPBB_WEBPUSHNOTIFICATIONS_ERROR_NO_USERNAME_OR_EMAIL',
+				'error_msg'	=> 'MARTTIPHPBB_WEBPUSH_ERROR_NO_USERNAME_OR_EMAIL',
 				'user_row'	=> ['user_id' => ANONYMOUS],
             ];
         }
